@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  #Devise Config
+  config.action_mailer.default_url_options = { host: '45.177.133.13', port: 3000 }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -38,6 +40,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
