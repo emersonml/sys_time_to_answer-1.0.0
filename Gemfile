@@ -10,8 +10,13 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'sprockets'
 gem 'sass-rails', '>= 6'
+##  segui instrucao do site https://fontawesome.com/v4.7.0/get-started/
+gem 'font-awesome-sass'
 gem 'coffee-rails'
+
 gem 'devise'
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'tty-spinner'

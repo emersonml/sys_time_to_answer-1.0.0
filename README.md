@@ -1,9 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Webpack é o empacotado JavaScript padrão para novos aplicativos Rails.
 
   gem 'coffee-rails'
   gem 'devise'
@@ -33,6 +31,17 @@ rails dev:setup
   config.sign_out_all_scopes = false
 #Remova o turbolinks
   Gemfile -  assets/application.js e  views/layouts
+  criar o aquivo assets/application.js 
+
+yarn add bootstrap@3.3.7
+yarn add metismenu@3.0.3  #metismenu exige q o jquery seja 3.3.1
+yarn add jquery@3.3.1
+yarn add font-awesome@4.6.3
+
+
+
+nvm install 10.17.0
+yarn add lodash #cria a pasta node_modulos
 
 
 
@@ -45,12 +54,8 @@ rails dev:setup
 
 
 
+<script src="assets/js/jquery.min.js"></script>
 
-
-
-
-
-
-$(".pages-contact").click(function() {
-  alert("O alert rodou!");
-});
+<script>
+  alert('okfff');
+</script> -->

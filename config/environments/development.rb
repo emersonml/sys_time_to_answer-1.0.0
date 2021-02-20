@@ -4,6 +4,8 @@ Rails.application.configure do
   #Devise Config
   config.action_mailer.default_url_options = { host: '45.177.133.13', port: 3000 }
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # config.web_console.whitelisted_ips = '200.110.200.1'
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

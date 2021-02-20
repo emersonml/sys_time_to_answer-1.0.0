@@ -2,18 +2,41 @@
   "name": "sys-time-to-answer-1-0-0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
-    "turbolinks": "^5.2.0"
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.6.3",
+    "jquery": "3.3.1",
+    "lodash": "^4.17.20",
+    "metismenu": "3.0.3",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.0.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "coffeescript": "^2.5.1",
     "webpack-dev-server": "^3.11.2"
   },
   "main": "index.js",
-  "repository": "https://github.com/emersonml/sys_time_to_answer-1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emersonml/sys_time_to_answer-1.0.0.git"
+  },
   "author": "emersonml <artes.emerson@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/emersonml/sys_time_to_answer-1.0.0/issues"
+  },
+  "homepage": "https://github.com/emersonml/sys_time_to_answer-1.0.0#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
+
