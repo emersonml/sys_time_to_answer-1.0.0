@@ -13,8 +13,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application' %>
-    <%= stylesheet_link_tag 'admins_backoffice' %>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <%= stylesheet_link_tag ( params[:controller].split('/')[0] ) %>
 
 
 
@@ -378,7 +377,7 @@
     <!-- /#wrapper -->
 
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'admins_backoffice.js' %>
+    <%= javascript_include_tag ( params[:controller].split('/')[0] ) %>
 
 
 

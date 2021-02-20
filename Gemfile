@@ -12,7 +12,7 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'sprockets'
-gem 'sass-rails', '>= 6'
+gem 'sass-rails', '>= 6' 
 ##  segui instrucao do site https://fontawesome.com/v4.7.0/get-started/
 gem 'font-awesome-sass'
 gem 'coffee-rails'
