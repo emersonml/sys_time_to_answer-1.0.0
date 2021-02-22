@@ -37,6 +37,7 @@ yarn add bootstrap@3.3.7
 yarn add metismenu@3.0.3  #metismenu exige q o jquery seja 3.3.1
 yarn add jquery@3.3.1
 yarn add font-awesome@4.6.3
+yarn add font-awesome@4.7.0
 
 
 
@@ -44,13 +45,16 @@ nvm install 10.17.0
 yarn add lodash #cria a pasta node_modulos
 
 
+gem 'font-awesome-sass' # para que os path do css
+# desabilitei gem 'font-awesome-sass' e add o cdn so awesome 4.7.0
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+# escolher icons https://fontawesome.com/icons?d=gallery&q=dashbo
 
 
 
 
 
-
-
+Fsi7p(Sz#H,(.^V
 
 
 
