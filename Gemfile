@@ -15,14 +15,14 @@ gem 'sprockets'
 gem 'sass-rails', '>= 6' 
 ##  segui instrucao do site https://fontawesome.com/v4.7.0/get-started/
 # gem 'font-awesome-sass'
-gem 'coffee-rails'
 
+gem 'coffee-rails'
 gem 'devise'
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'tty-spinner'
 ## Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
-
+gem 'faker'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
@@ -55,6 +55,10 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'awesome_print'
+
+  # gem 'pry-rails'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -54,6 +54,17 @@ gem 'faker'
 gem 'awesome_print' # rails c => ap Adimn.all
 
 
+152 - conhecendo o form_with  #https://www.udemy.com/course/rubyonrails-5x/learn/lecture/13333554#announcements
+|1 form_with é a mistura de form_for com form_tag, é quando vc precisaria trabalhar com variáveis vindo do banco  
+|2 form_with vem por padrao com jason, entao é preciso adicionar local:true para html
+
+#consultar erros e capturar em forma de array
+|a = Admin.new
+|a.save!
+|a.errors
+|a.errors.any?
+|a.errors.full_messages
+
 
 
 
