@@ -4,10 +4,14 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   end
 
   def edit
-    @admins = Admin.find(params[:id])   
+    @admin = Admin.find(params[:id])   
   end
   
   def update
+    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank? 
+      params[:admin].extract!(:password, :password_confirmation)
+    end
+
     @admin = Admin.find(params[:id])
     params_admin = params.require(:admin).permit(:email, :password, :password_confirmation)
     if @admin.update(params_admin)

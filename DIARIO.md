@@ -65,6 +65,12 @@ gem 'awesome_print' # rails c => ap Adimn.all
 |a.errors.any?
 |a.errors.full_messages
 
+h = {a: 1, b: 2, c: 3}
+h.extract!(:b) # assim consigo remover a chave b da hash
+
+
+
+
 
 
 
