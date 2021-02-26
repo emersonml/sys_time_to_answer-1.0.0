@@ -65,9 +65,19 @@ gem 'awesome_print' # rails c => ap Adimn.all
 |a.errors.any?
 |a.errors.full_messages
 
+DICAS VSCODE = shift +alt + 0 para alternar o layout splitado
+
 h = {a: 1, b: 2, c: 3}
 h.extract!(:b) # assim consigo remover a chave b da hash
 
+bootstrap-growl-ifightcrime # para notice em javascript
+  baixando do site do yarnpkg
+  foi preciso instalar pelo npm pois o lock do yarn estava conflitando com o npm
+  npm add bootstrap-growl-ifightcrime
+
+add o caminho do jquery ifightcrime no assets
+https://github.com/ifightcrime/bootstrap-growl  ## documentacao do ifightcrime
+   
 
 
 
