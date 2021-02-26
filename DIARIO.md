@@ -78,7 +78,14 @@ bootstrap-growl-ifightcrime # para notice em javascript
 add o caminho do jquery ifightcrime no assets
 https://github.com/ifightcrime/bootstrap-growl  ## documentacao do ifightcrime
    
+=============
+EXISTE VERDO E ACTION
+delete é o verbo 
+destroy é a action
+   entao fazer a correcao na router
+=============
 
+##PAGINAÇAO COM kaminari
 
 
 

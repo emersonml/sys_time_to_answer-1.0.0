@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     ## get 'admins/index'  ##substituido pelo resource
     ## get 'admins/edit/:id', to: 'admins#edit'  ##substituido pelo resource
     ## resources :admins, only: [:index, :new, :edit, :update, :create]
-    resources :admins, expect: [:delete]
+    ## resources :admins, expect: [:delete]
+    resources :admins
   end
   namespace :users_backoffice do
     get 'welcome/index'
