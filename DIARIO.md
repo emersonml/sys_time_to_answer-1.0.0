@@ -87,6 +87,16 @@ destroy é a action
 
 ##PAGINAÇAO COM kaminari
 
+## alterando de:   rvmrc to .ruby-version   ## https://stackoverflow.com/questions/15708916/use-rvmrc-or-ruby-version-file-to-set-a-project-gemset-with-rvm
+ rvm --create --ruby-version 2.1.1@nancy
+ rvm info
+
+27/02/21 ==================== theme para PAGINAÇAO kaminari
+erro no gerador de views => rails g kaminari:views
+adicionei o tema na mao
+
+
+
 
 
 
