@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     ## resources :admins, only: [:index, :new, :edit, :update, :create]
     ## resources :admins, expect: [:delete]
     resources :admins
+    resources :subjects 
+    resources :questions 
   end
   namespace :users_backoffice do
     get 'welcome/index'

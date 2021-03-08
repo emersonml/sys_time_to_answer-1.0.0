@@ -1,5 +1,7 @@
-# README
+https://www.youtube.com/watch?v=SLWUEu1mmvM  (  debung )
 
+# README
+ ssh root@45.177.133.13 -p 22122
 
 # Webpack é o empacotado JavaScript padrão para novos aplicativos Rails.
 
@@ -94,6 +96,43 @@ destroy é a action
 27/02/21 ==================== theme para PAGINAÇAO kaminari
 erro no gerador de views => rails g kaminari:views
 adicionei o tema na mao
+
+27/02/21 commit 14 ==============
+gem kaminari-i18n  # só add e pronto
+
+
+#criando as migracoes  https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html
+
+rails g model subject description:string
+rails g model question description:text subject:references
+rails g model answer description:text correct:boolean question:references
+  add as restricoes de integridades nas migrate
+rails db:migrate
+
+
+# criando task para assuntos
+  DEFAULT_FILES_PATH = File.join(Rails.root, 'lib', 'tmp')
+     File.join é responsavel por  colocar uma / antes de lib e tmp para caso use windows
+
+rails c
+q = Question.all  
+q.subject.description
+
+s = Subject.find(52)
+s.description
+s.questions.description ##  aqui a nescessário add o has e observe que questionS plural
+
+rails g controller AdminsBackoffice/Questions
+
+locales
+s = Subject.all
+s.model ## com isso eu consigo na view saber quem é o model 
+
+help -> traduzindo_para_humanos()
+
+
+
+
 
 
 

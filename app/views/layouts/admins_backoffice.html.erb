@@ -264,6 +264,12 @@
                             </div>
                             <!-- /input-group -->
                         </li>
+
+                        <li>
+                            <%= link_to site_welcome_index_path do %>
+                             SITE
+                            <% end %>
+                        </li>
                         <li>
                             <%= link_to admins_backoffice_welcome_index_path do %>
                             <i class="fas fa-tachometer-alt"></i> Dashboard
@@ -272,6 +278,16 @@
                         <li>
                             <%= link_to admins_backoffice_admins_path do %>
                             <i class="fas fa-users-cog"></i> Administradores
+                            <% end %>
+                        </li>
+                        <li>
+                            <%= link_to admins_backoffice_subjects_path do %>
+                            <i class="fas fa-list"></i> Assuntos/Área
+                            <% end %>
+                        </li>
+                        <li>
+                            <%= link_to admins_backoffice_questions_path do %>
+                            <i class="fas fa-list"></i> Perguntas
                             <% end %>
                         </li>
 
@@ -321,7 +337,7 @@
 <% end %>
 
 
-<%= link_to 'site/welcome', site_welcome_index_path %> </br>
+
 
 
 
