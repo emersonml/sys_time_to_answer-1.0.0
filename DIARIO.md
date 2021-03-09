@@ -130,10 +130,18 @@ s.model ## com isso eu consigo na view saber quem é o model
 
 help -> traduzindo_para_humanos()
 
+## 3 formas de cadastrar no ActiveRecord
+# Question.create!(description: "sdkgksg?", subject: Subject.all.sample)  ## sample = amostra do sorteado da vez
+## q.subject = Subject.all.sample
+   q.save!
+### params = { question: {description: "asskgj?", subject_id: 123} }
+     Question.create!(params[:question])
+ #### na vdd sao 4 forma entao vai a ultima aí
+   params = { question: {description: "asskgj?", subject_id: 123} }
+   x = Question.new(params[:question])
+   x.save!
 
-
-
-
+ params[:question][:answers_attributes].push({ description: 'resposta 4', correct: false})
 
 
 

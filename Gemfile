@@ -27,6 +27,7 @@ gem 'uglifier'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem 'cocoon'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
