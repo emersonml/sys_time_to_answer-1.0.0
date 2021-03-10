@@ -4,7 +4,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
 
   def index
-    @admins = Admin.all.page(params[:page])
+    console
+    @admins = Admin.all.order(:email).page(params[:page])
   end 
   
   def new

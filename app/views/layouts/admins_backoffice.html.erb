@@ -238,10 +238,10 @@
                         <li class="divider"></li>
                         
                         <li>
-<%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
-
-
-
+                            <%= link_to destroy_admin_session_path, method: :delete do %>
+                                <i class="fas fa-sign-out-alt fa-fw"></i> Sair
+                            <% end %>
+                            
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

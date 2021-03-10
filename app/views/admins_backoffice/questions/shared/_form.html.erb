@@ -33,7 +33,9 @@
                                 <%= form.label :description %>
                                 <%= form.text_area :description, 
                                          class:"form-control", 
-                                        placeholder: t('placeholder.question_description'), rows: 5  %>
+                                        # placeholder: t('placeholder.question_description'), rows: 5
+                                        placeholder: "Digite aqui sua pergunta", rows: 5 
+                                %> 
                                 <trix-editor input="question_description"></trix-editor>
                             </div>
 
@@ -44,11 +46,11 @@
 
                             <div id='answers'>
 
-                                <%= form.fields_for :answers do |answer| %>
+                                <%= form.fields_for :answers do |answer| %> ## fields_for significa q sao campos aninhados de outra tabela/form e nao mas da que vinha sendo usada acima 
                                   <%= render partial: "answer_fields", locals: { f: answer } %>
                                 <% end %>
 
-                                <%# <%= link_to_add_association '[Adicionar Resposta]', form, :answers %> %>
+                                <%= link_to_add_association '[Adicionar Resposta]', form, :answers %>
                             </div>
 
                             <button type="submit" class="btn btn-default">

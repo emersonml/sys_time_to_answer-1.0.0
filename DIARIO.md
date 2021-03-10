@@ -143,6 +143,24 @@ help -> traduzindo_para_humanos()
 
  params[:question][:answers_attributes].push({ description: 'resposta 4', correct: false})
 
+#################
+NAO DEIXAR DE REVISAR 180 A 183
+##############
+
+gem rails_db  ## https://github.com/igorkasyanchuk/rails_db/
+gem 'web-console'  ## https://github.com/rails/web-console
+
+
+
+local: true, ====> para nao ultilizar ajax 
+
+
+
+
+
+
+
+
 
 
 

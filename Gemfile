@@ -29,6 +29,7 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'cocoon'
 
+
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -62,6 +63,8 @@ group :development do
   gem 'awesome_print'
 
   gem 'pry-rails'
+  gem 'rails_db', '2.3.1'
+  gem 'web-console', '>= 4.1.0'
 
 end
 
