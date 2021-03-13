@@ -9,7 +9,9 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+// rails-ujs é uma aplicacao necessária para rodar os arquivos js tipo o question.js.erb
+
 //= require rails-ujs
 //= require activestorage
 

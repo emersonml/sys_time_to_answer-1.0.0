@@ -1,0 +1,152 @@
+<div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Dados do Perfil </h2>
+                    <%#= @user.first_name  %>
+                    <%= current_user.first_name %> 
+                    <%#= @user.all %> 
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                            <%# if @user.errors.any? %>
+                            <% if current_user.errors.any? %>
+                                <div class="alert alert-danger alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <ul>
+                                      <%# @user.errors.full_messages.each do |message| %>
+                                      <% current_user.errors.full_messages.each do |message| %>
+                                        <li> <%= message %> </li>
+                                      <% end %>
+                                    </ul>
+                                </div>
+                            <% end %>
+
+
+                    <br>
+<%= form_with(url: users_backoffice_profile_path, model: current_user, local: true, class:"form-horizontal form-label-l   eft") do |form| %>
+
+
+                      <div class="form-group">
+                          <%= form.label :first_name, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= form.text_field :first_name, class:"form-control col-md-7 col-xs-12"   %>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <%= form.label :last_name, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= form.text_field :last_name, class:"form-control col-md-7 col-xs-12"   %>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <%= form.label :email, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= form.text_field :email, class:"form-control col-md-7 col-xs-12", 
+                                          readonly: true  %>
+                          </div>
+                      </div>
+
+                      <%= form.fields_for :user_profile do |profile_form| %>
+                      <div class="form-group">
+                          <%= profile_form.label :address, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= profile_form.text_field :address, class:"form-control col-md-7 col-xs-12" %>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <%= profile_form.label :gender, class:"control-label col-md-3 col-sm-3 col-xs-12" %>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn <%= h_genderSelecT(current_user, 'M') %>" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <%= profile_form.radio_button :gender, "M", "data-parsley-multiple":"gender"%> &nbsp; Masculino &nbsp;
+                            </label>
+                            <label class="btn <%= h_genderSelecT(current_user, 'F') %>" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <%= profile_form.radio_button :gender, "F", "data-parsley-multiple":"gender"%> &nbsp; Feminino &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+<%= javascript_tag do %>
+               var labels = document.querySelectorAll('div#gender label');
+
+               labels.forEach((label) => {
+                 label.addEventListener('click', () => {
+                   label.classList.remove('btn-default');
+                   label.classList.add('btn-primary');
+
+                   labels.forEach((lbl) => {
+                     if(lbl !== label){
+                        lbl.classList.remove('btn-primary');
+                        lbl.classList.add('btn-default');
+                     };
+                   });
+                 });
+               });
+<% end %>
+
+
+
+                      
+                      <div class="form-group">
+                          <%= profile_form.label :birthdate, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= profile_form.text_field :birthdate, class:"form-control col-md-7 col-xs-12" %>
+                          </div>
+                      </div>
+
+                     
+                     <% end %>
+                     
+                      
+                      <div class="form-group">
+                          <%= form.label :password, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= form.password_field :password, class:"form-control col-md-7 col-xs-12"   %>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <%= form.label :password_confirmation, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <%= form.password_field :password_confirmation, class:"form-control col-md-7 col-xs-12"   %>
+                          </div>
+                      </div>
+
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="button" class="btn btn-primary" >Cancel</button>
+						              <button type="reset"  class="btn btn-primary" >Reset </button>
+                          <button type="submit" class="btn btn-success" >Enviar</button>
+                        </div>
+                      </div>
+
+<% console %>
+<% end %>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>

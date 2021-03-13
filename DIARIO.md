@@ -150,11 +150,25 @@ NAO DEIXAR DE REVISAR 180 A 183
 gem rails_db  ## https://github.com/igorkasyanchuk/rails_db/
 gem 'web-console'  ## https://github.com/rails/web-console
 
-
-
 local: true, ====> para nao ultilizar ajax 
 
+Answer.where(id: 1) ## ele retorna um array (ActiveRecord)
+Answer.find(id: 1) ## ele traz de fato a tupla
 
+
+## -- Pense sempre em como o servidor vai receber as requisicoes, bem como o DB está reagindo
+
+# counter_cache   ->  https://www.udemy.com/course/rubyonrails-5x/learn/lecture/14742938#announcements
+  migration cria o esquema
+  migrate migra o esquema para o db
+
+
+## 213 =>  Validation Helpers  #  https://guides.rubyonrails.org/active_record_validations.html#validation-helpers
+
+rails g model UserProfile address:string gender:string birthdate:date user:references
+
+
+@user.build_user_profile #!!!   ##quando se tem um relacionamento do tipo has_name o build server para criar os registros da tabela relacionada de se o relacionamento fosse o contrario o build ficaria no final tipo: user_profile_build
 
 
 

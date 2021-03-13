@@ -1,4 +1,4 @@
-class AdminsBackoffice::AdminsController < AdminsBackofficeController
+  class AdminsBackoffice::AdminsController < AdminsBackofficeController
   before_action :verify_password, only: [:update]
   before_action :tupla_admin, only: [:edit, :update, :destroy]
 
