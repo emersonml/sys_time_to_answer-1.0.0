@@ -163,12 +163,44 @@ Answer.find(id: 1) ## ele traz de fato a tupla
   migrate migra o esquema para o db
 
 
-## 213 =>  Validation Helpers  #  https://guides.rubyonrails.org/active_record_validations.html#validation-helpers
+213 ##  =>  Validation Helpers  #  https://guides.rubyonrails.org/active_record_validations.html#validation-helpers
 
 rails g model UserProfile address:string gender:string birthdate:date user:references
 
 
 @user.build_user_profile #!!!   ##quando se tem um relacionamento do tipo has_name o build server para criar os registros da tabela relacionada de se o relacionamento fosse o contrario o build ficaria no final tipo: user_profile_build
+
+
+
+# trabalhando com data
+   https://jqueryui.com/datepicker/     https://classic.yarnpkg.com/pt-BR/package/jquery-ui
+
+#  rota para admins  ##   get 'r_admins', to: 'admins_backoffice/welcome#index', as: 'r_admins' 
+
+# Modals  BOOTSTRAP
+219 # corrigindo a data de nascimento do perfil  ### eu nao apliquei mas tem coisa importante nesse aula 
+
+# ACTIVE STORAGE adicionando foto ao perfil 
+    bin/rails active_storage:install  # esse comando vai criar duas migrations para criar as tabelas  ### https://edgeguides.rubyonrails.org/active_storage_overview.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
