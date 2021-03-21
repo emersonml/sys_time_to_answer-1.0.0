@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  namespace :site do
-    get 'welcome/index'
-    get 'search', to: 'search#questions'
-    get 'subject/:subject_id/:subject', to: 'search#subject', as: 'search_subject'
-    post 'answer', to: 'answer#question'
-  end
+  # ADMINS_BACKOFFICE
   namespace :admins_backoffice do
     get 'welcome/index'
     ## get 'admins/index'  ##substituido pelo resource
@@ -15,12 +10,21 @@ Rails.application.routes.draw do
     resources :subjects 
     resources :questions 
   end
+  # USERS_BACKOFFICE
   namespace :users_backoffice do
     get 'welcome/index'
     get 'profile', to: 'profile#edit'
-    patch'profile', to: 'profile#update'      #patch para enviar dados de atualizacao e nao de criacao. patch e nao put pq posso enviar apenas parque dos dados 
+    patch 'profile', to: 'profile#update'    #patch para enviar dados de atualizacao e nao de criacao. patch e nao put pq posso enviar apenas parque dos dados 
+    # patch 'profile', to: 'profile#update', :defaults => { :format => 'js' }  ## usando Turbolinks.start()  
   end
-
+  # SITE
+  namespace :site do
+    get 'welcome/index'
+    get 'search', to: 'search#questions'
+    get 'subject/:subject_id/:subject', to: 'search#subject', as: 'search_subject'
+    post 'answer', to: 'answer#question'
+    # post 'answer', to: 'answer#question', as: 'r_site_answer_post'
+  end
   
   devise_for :admins, skip: [:registrations]
   devise_for :users

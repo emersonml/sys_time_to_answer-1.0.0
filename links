@@ -1,0 +1,27 @@
+Customizando seu workflow ## https://guides.rubyonrails.org/generators.html#customi
+zing-your-workflow
+
+HTTP Basic Authentication ## https://api.rubyonrails.org/classes/ActionController/H
+ttpAuthentication/Basic.html
+
+Devise
+○ https://github.com/plataformatec/devise
+
+Devise
+○ https://github.com/plataformatec/devise#getting-started
+
+Ativando o i18n
+○ https://github.com/svenfuchs/rails-i18n
+○ https://guides.rubyonrails.org/i18n.html#configure-the-i1
+8n-module
+
+Devise i18n
+○ https://github.com/plataformatec/devise/wiki/I18n
+○ https://github.com/tigrish/devise-i18n
+
+I18n para Models
+○ https://guides.rubyonrails.org/i18n.html#translations-for
+-active-record-models
+
+5 formas de criar métodos em Ruby
+○ http://bit.ly/5-formas-metodos-ruby

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     layout :layout_by_resource
     before_action :check_pagination
-    before_action :set_global_params
+    before_action :c_setGlobalParamS
   
     protected
   
@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
         end
       end
   
-      def set_global_params
-        $global_params = params
+      def c_setGlobalParamS
+        $v_globalParamS = params
       end
   end
   

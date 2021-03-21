@@ -4,6 +4,11 @@
   <div class="login_wrapper">
     <div class="animate form login_form">
       <section class="login_content">
+
+                            <%= link_to site_welcome_index_path do %>
+                             <i class="fas fa-step-backward"></i> TIME TO ANSWER
+                            <% end %>
+
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <h1>Login</h1>
           <div>
@@ -17,6 +22,8 @@
           <div>
             <%= f.submit "Entrar", class:"btn btn-default submit", style:"float: none; margin-left: 0px; width: 40%;" %>
             <%= link_to 'Esqueceu a sua senha?', new_user_password_path, class:"reset_pass" %>
+            <div class="separator"></div>
+            <%= link_to 'Cadastrar-se', new_user_registration_path %>
             <div class="separator"></div>
             <%= link_to 'Entrar como Admin', admins_backoffice_welcome_index_path %>
 

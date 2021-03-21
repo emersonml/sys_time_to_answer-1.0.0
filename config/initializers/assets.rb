@@ -9,7 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
-# Rails.application.config.assets.paths << Rails.root.join('node_modules', 'assets', 'vendor')
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets" )  ### https://guiarails.com.br/asset_pipeline.html
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
@@ -24,12 +24,12 @@ Rails.application.config.assets.precompile += %w( application.js application.css
                                                   site.js site.css )
 
 
-#/lig/assets
+#/lib/assets
 Rails.application.config.assets.precompile += %w(   sb-admin-2.js sb-admin-2.css 
                                                     custom.js custom.css
                                                     img.jpg
                                                     surface-fix.js surface-fix.css
                                                     navbar.css )
 
-
+#/vendor/assets
 Rails.application.config.assets.precompile += %w( jquery/dist/jquery.js )

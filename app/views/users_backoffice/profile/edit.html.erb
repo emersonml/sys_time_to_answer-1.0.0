@@ -39,39 +39,37 @@
 
 
                     <br>
-<%= form_with(url: users_backoffice_profile_path, model: current_user, local: true, class:"form-horizontal form-label-l   eft") do |form| %>
-
-
-                      <div class="form-group">
+<%# FORM WITH %>
+<%= form_with(url: users_backoffice_profile_path, model: current_user, class:"form-horizontal form-label-l   eft") do |form| %>
+<%# <%= form_with(url: users_backoffice_profile_path, model: current_user, local: true, class:"form-horizontal form-label-l   eft") do |form| %> 
+                      <div class="form-group"><%# first_name %>
                           <%= form.label :first_name, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= form.text_field :first_name, class:"form-control col-md-7 col-xs-12"   %>
                           </div>
                       </div>
-
-                      <div class="form-group">
+                      <div class="form-group"><%# last_name %>
                           <%= form.label :last_name, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= form.text_field :last_name, class:"form-control col-md-7 col-xs-12"   %>
                           </div>
                       </div>
-
-                      <div class="form-group">
+                      <div class="form-group"><%# email %>
                           <%= form.label :email, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= form.text_field :email, class:"form-control col-md-7 col-xs-12", 
                                           readonly: true  %>
                           </div>
                       </div>
-
-                      <%= form.fields_for :user_profile do |profile_form| %>
+<%## FORM FIELDS FOR   user_profile %>
+<%= form.fields_for :user_profile do |profile_form| %>
                       <div class="form-group">
                           <%= profile_form.label :address, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= profile_form.text_field :address, class:"form-control col-md-7 col-xs-12" %>
                           </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group"> <%# gender %>
                         <%= profile_form.label :gender, class:"control-label col-md-3 col-sm-3 col-xs-12" %>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div id="gender" class="btn-group" data-toggle="buttons">
@@ -84,7 +82,6 @@
                           </div>
                         </div>
                       </div>
-
 <%= javascript_tag do %>
                var labels = document.querySelectorAll('div#gender label');
 
@@ -102,32 +99,22 @@
                  });
                });
 <% end %>
-
-
-
-                      
-                      <div class="form-group">
+                      <div class="form-group"> <%##  birthdate  %>
                           <%= profile_form.label :birthdate, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= profile_form.date_field :birthdate, 
                                 class:"form-control col-md-7 col-xs-12" %>
                           </div>
                       </div>
-                     
-                     <% end %>    <%# form field for %>
-                     
-
-
-                     
-                      
-                      <div class="form-group">
+ <% end %>  <%## FORM FIELDS FOR   user_profile %>                  
+                      <div class="form-group"> <%##  password  %>
                           <%= form.label :password, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= form.password_field :password, class:"form-control col-md-7 col-xs-12"   %>
                           </div>
                       </div>
 
-                      <div class="form-group">
+                      <div class="form-group"> <%## password_confirmation %>   
                           <%= form.label :password_confirmation, class:"control-label col-md-3 col-sm-3 col-xs-12"%>
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <%= form.password_field :password_confirmation, class:"form-control col-md-7 col-xs-12"   %>
@@ -145,7 +132,7 @@
                       </div>
 
 <% console %>
-<% end %>
+<% end %>   <%## FORM WITH %>
 
 
 

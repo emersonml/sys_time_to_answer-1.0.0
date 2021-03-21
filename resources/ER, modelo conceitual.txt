@@ -1,0 +1,11 @@
+
+MODELO CONCEITUAL FORMAL
+
+admins              (id, email)
+admin_statistics    (id, event, value)
+users               (id, email, first_name, last_name)
+user_profiles       (id, address, gender, birthdate, user_id)               index_user_profiles_on_user_id
+user_statistics     (id, right_questions, wrong_questions, user_id)         index_user_statistics_on_user_id
+subjects            (id, description, questions_count)
+questions           (id, description, subject_id)                           index_questions_on_subject_id
+answers             (id, description, correct, question_id)                 index_answers_on_question_id

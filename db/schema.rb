@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_205711) do
+ActiveRecord::Schema.define(version: 2021_03_14_235445) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 2021_03_13_205711) do
     t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "admin_statistics", force: :cascade do |t|
+    t.string "event"
+    t.integer "value", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "admins", force: :cascade do |t|
@@ -86,6 +93,15 @@ ActiveRecord::Schema.define(version: 2021_03_13_205711) do
     t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
+  create_table "user_statistics", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "right_questions", default: 0
+    t.integer "wrong_questions", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_statistics_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -105,4 +121,5 @@ ActiveRecord::Schema.define(version: 2021_03_13_205711) do
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "subjects"
   add_foreign_key "user_profiles", "users"
+  add_foreign_key "user_statistics", "users"
 end

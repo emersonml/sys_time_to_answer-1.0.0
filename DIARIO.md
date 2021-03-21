@@ -182,31 +182,47 @@ rails g model UserProfile address:string gender:string birthdate:date user:refer
 
 # ACTIVE STORAGE adicionando foto ao perfil 
     bin/rails active_storage:install  # esse comando vai criar duas migrations para criar as tabelas  ### https://edgeguides.rubyonrails.org/active_storage_overview.html
+       ## url_for(current_user.user_profile.avatar)  esse seria o caminho real para a imagem
+
+## entender jquery-ujs para poder trabalhar com :format.js   https://github.com/rails/jquery-ujs/wiki/ajax
+
+
+
+
+224 #  Estatistica do usuário
+   rails g model UserStatistic user:references right_questions:integer wrong_questions:integer
+
+# SQL =>  DROP TABLE user_statistic ;  
+
+# rails db:rollback STEP=1  ## reverter uma migrate
+      db:migrate:status
+
+225 #  !!current_user  ## nega 2 vezes que transfomar em um valor boleano 
+
+
+226 # ESTATISTICAS DO ADMIN
+      rails g model AdminStatistic event:string value:integer
+
+
+# CALLBACKS  estudar  ## https://guides.rubyonrails.org/active_record_callbacks.html
+
+227 no final do video    # rever scopo para limpar ADMINS_BACKOFFICE/welcome/index
+
+229 Mailtrap
+
+
+####### DEPLOY #######
+ git rm config/database.yml
+ git add .
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+c_ = callbacks
+f_ = funcao
+s_ = scope
+v_ = variável
 
 
 

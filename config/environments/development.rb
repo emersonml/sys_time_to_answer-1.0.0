@@ -3,9 +3,25 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   #Devise Config
   config.action_mailer.default_url_options = { host: '45.177.133.13', port: 3000 }
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :user_name => 'e220d68e6719c0',
+  :password => 'bb736e1c35b2a6',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
+  
+  
   # Settings specified here will take precedence over those in config/application.rb.
   
   config.web_console.whitelisted_ips = '200.110.200.1'
+
+
+  ####  config.asset_host = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'
+
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
@@ -18,6 +34,9 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+
+
+  
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?

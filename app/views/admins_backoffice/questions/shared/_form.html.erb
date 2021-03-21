@@ -49,10 +49,14 @@
                                 <%= form.fields_for :answers do |answer| %> <!-- ## fields_for significa q sao campos aninhados de outra tabela/form e nao mas da que vinha sendo usada acima  -->
                                   <%= render partial: "answer_fields", locals: { f: answer } %>
                                 <% end %>
+                                </br>
+                                <%= link_to_add_association form, :answers do %>
+                                    <button type="submit" class="btn btn-default"> Adicionando Respostas </button>
+                                <% end %>
+                                
 
-                                <%= link_to_add_association '[Adicionar Resposta]', form, :answers %>
                             </div>
-
+</br>
                             <button type="submit" class="btn btn-default">
                               <%= t('button.save') %>  
                             </button>

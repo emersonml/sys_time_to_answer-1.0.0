@@ -1,0 +1,12 @@
+class CreateUserStatistics < ActiveRecord::Migration[6.1]
+  def change
+    create_table :user_statistics do |t|
+      t.references :user, null: false, foreign_key: true
+      t.integer :right_questions, :default => 0
+      #Ex:- :default =>''
+      t.integer :wrong_questions, :default => 0
+
+      t.timestamps
+    end
+  end
+end

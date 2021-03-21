@@ -1,4 +1,5 @@
 class UsersBackoffice::ProfileController < UsersBackofficeController
+  respond_to :json
   # before_action :f_set_user
   before_action :f_verifyPassworD, only: [:update]
 
@@ -15,20 +16,24 @@ class UsersBackoffice::ProfileController < UsersBackofficeController
         if current_user.update(f_params_user)
           # sign_in(@user, bypass: true)  # esse comando foi atualizado 
           bypass_sign_in(current_user)  #  faz com que o usuario ao alter a senha nao seja deslogado (rails tem uma funcao interna q desloga o user quando a senha é alterada)
-          if f_params_user[:user_profile_attributes][:avatar]
-          redirect_to users_backoffice_profile_path, notice: "Avatar Atualizado com Sucesso"
+          unless f_params_user[:user_profile_attributes][:avatar]
+            redirect_to users_backoffice_profile_path, notice: "Usuário Atualizado com Sucesso"
           else
-          redirect_to users_backoffice_profile_path, notice: "Usuário Corrente Atualizado com Sucesso"
+            redirect_to users_backoffice_profile_path, notice: "Avatar Atualizado com Sucesso"
           end
+          # render formats: [:js]
+           
         else
           render :edit
         end
+        
     end
         
     
     private
     
     def f_params_user
+      ## company  = params[:person].delete(:company)
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation,
         user_profile_attributes: [:id, :address, :gender, :birthdate, :avatar])
         # user_profile_attributes: [:id, :address, :zip_code, :gender, :birthdate, :avatar])

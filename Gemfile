@@ -60,7 +60,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'awesome_print'
 
-  gem 'pry-rails'
+   gem 'pry-rails'
   gem 'rails_db', '2.3.1'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'

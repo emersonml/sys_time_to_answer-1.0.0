@@ -7,6 +7,7 @@
 </div>
 
 <% @questions.each do |question| %>
+<%# FORM WITH %>
   <%= form_with url: site_answer_path, local: false do |form| %>
     <div class="panel panel-default">
       <div class="panel-heading">

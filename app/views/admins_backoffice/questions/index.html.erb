@@ -18,10 +18,11 @@
                     <i class="fas fa-question-circle" ></i>
                 </th>
                 <th>
-                    <%= traduzindo_para_humanos(@questions, :description)%>
+                    <%= h_traduzindoParaHumanoS(@questions, :description)%>
                 </th>
                 <th>
-                    <%= @questions.model.human_attribute_name(:subject)%>
+                    <%= h_traduzindoParaHumanoS(@questions, :subject)%>
+                    <%#= @questions.model.human_attribute_name(:subject)%>
                 </th>
                 <th>
                     <!-- ## add question -->

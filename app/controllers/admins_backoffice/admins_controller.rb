@@ -4,8 +4,9 @@
 
 
   def index
-    console
+    # console
     @admins = Admin.all.order(:email).page(params[:page])
+    # @admins.inspect
   end 
   
   def new
